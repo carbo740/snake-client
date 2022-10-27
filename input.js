@@ -7,11 +7,12 @@ const setupInput = function () {
   return stdin;
 };
 
-const handleUserInput = () => {
-
-  if (data === ".") {
+const handleUserInput = (key) => {
+  
+  if (key === '\u0003') {
     process.exit();
   }
+  
 }
 
 module.exports = {
