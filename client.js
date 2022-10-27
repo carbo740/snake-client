@@ -8,7 +8,6 @@ const connect = function () {
   conn.on("connect", (client) => {
     console.log("Sucessfully connected to game server");
     conn.write("Name: CBA");
-    setInterval(() => {conn.write("Move: up")}, 50);
   })
 
   
