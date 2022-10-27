@@ -5,6 +5,12 @@ const connect = function () {
     port: "50541",
   });
 
+  conn.on("connect", (client) => {
+    console.log("Sucessfully connected to game server");
+    conn.write("Name: CBA");
+  })
+
+  
   conn.setEncoding("utf8");
   
   conn.on("data", (data) => {
@@ -17,4 +23,5 @@ const connect = function () {
 module.exports = {
   connect,
 }
+
 connect();
